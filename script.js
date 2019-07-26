@@ -83,3 +83,11 @@ var myChart = new Chart(ctx, {
     options: {}
     }
 ); // de data in canvas verkrijgen, nieuwe canvas verkrijgen zodat deze apart wordt gezet van de 1ste tabel
+
+fetch('https://becoderandomdata.000webhostapp.com/randomdata.php')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  }); // om de data te fetchen en te verkrijgen
